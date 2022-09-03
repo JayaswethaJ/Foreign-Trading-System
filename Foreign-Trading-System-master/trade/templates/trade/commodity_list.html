@@ -1,0 +1,23 @@
+{% extends 'basetemp.html' %}
+{% block content %}
+
+<center>
+<div class="card border-success col-sm-4 mt-4 p-4">
+<div class="card-header bg-success"> Commodities available to be exported by you</div>
+<div class="card-body">
+<form>
+
+  <!-- <div class="form-control"> -->
+  {% for obj in object_list %}
+        <div class="form-row form-control">
+        <td><input type="text" readonly class="form-control-plaintext col-sm-3" value={{obj.commodityName}}></td>
+        <td><input type="text" readonly class="form-control-plaintext col-sm-3" value={{obj.quantityAvailable}}></td>
+        <td><input type="text" readonly class="form-control-plaintext col-sm-3" value={{obj.price}}></td>
+        </div>
+  {%endfor%}
+  <!-- </div> -->
+</form>
+</div>
+</div>
+</center>
+{% endblock %}

@@ -1,0 +1,17 @@
+{% extends 'basetemp.html' %}
+
+{% block content %}
+<div class="container">
+<div class="row col-sm-12">
+ {% for post in posts %}
+ <div class="card col-sm-3 m-4 p-4 border-success">
+          <h2>{{ post.importerName }}</h2>
+          <h2>{{ post.commodityName }}</h2>
+          <!-- <p>Exporter: {{ post.price }}</p> -->
+          <p>Quantity Requested: {{ post.quantityRequested }}</p>
+          <a class="btn btn-success" href="{% url 'details' post.id %}">Accept</a>
+  </div>
+  {% endfor %}
+  </div>
+  </div>
+{% endblock %}

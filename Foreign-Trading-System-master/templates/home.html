@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>home</title>
+  <style>
+    body{
+  font-family: Righteous;
+  background-image: url("https://www.novak.nl/wp-content/uploads/2018/09/Toetsing.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+h1{
+  font-size: 60px;
+  color: black;
+  /*background-color: white;*/
+}
+p{
+  font-size: 50px;
+  color: black;
+  /*background-color: white;*/
+  margin:10px 400px 10px 400px;
+  padding: 10px;
+  /*border: 2px white solid;*/
+}
+a{
+  font-size: 40px;
+  margin: 20px;
+  background-color: #F59E47;
+  padding: 10px;
+  border: 2px black solid;
+  text-decoration: none;
+}
+a:hover{
+  background-color: #F2B629;
+  color: black;
+}
+  </style>
+  <link href="https://fonts.googleapis.com/css?family=Righteous" rel="stylesheet">
+</head>
+<body>
+  <!-- {#this is the home page and it gives the user two options either to login as a trader or an admin#}
+{% extends 'base.html' %}
+
+{%block content%} -->
+
+<center>
+<div class="card border-success col-sm-8 p-4 mt-3">
+<div class="jumbotron text-center">
+  <br>
+  <br>
+  <h1>Welcome to Foreign Trading System</h1>
+  <p>Please login to continue</p>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+</div>
+
+<!-- <div class="btn-group"> -->
+  <!-- <div class="col-sm-5"> -->
+    <a href="/accounts/login/" class="btn btn-success btn-block" role="button">Login as trader</a>
+  <!-- </div> -->
+  <!-- <div class="col-sm-5"> -->
+    <a href="/admin/" class="btn btn-success btn-block" role="button">Login as admin</a>
+  <!-- </div> -->
+<!-- </div> -->
+</div>
+</center>
+<!-- {%endblock%} -->
+</body>
+</html>

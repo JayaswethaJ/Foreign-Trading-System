@@ -1,0 +1,59 @@
+{% extends 'basetemp.html' %}
+
+{% block content %}
+<div class="container">
+<div class="row col-sm-12">
+ {% for post in posts %}
+      <div class="card col-sm-3 m-4 p-4 border-success">
+          <p>Exporter: {{ post.exporterName }}</p>
+          <h2><a href="">{{ post.commodityName }}</a></h2>
+          <p>Price: {{ post.price }}</p>
+          <p>Quantity: {{ post.quantityAvailable }}</p>
+          <!-- <p>{{ post.description|linebreaksbr }}</p> -->
+          <!-- Button trigger modal -->
+<button type="button" class="btn btn-info" data-toggle="modal" data-target="#exampleModal" data-whatever="{{post.description}}">Show details</button>
+
+<div class="modal" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header bg-info">
+        <h5 class="modal-title" id="exampleModalLabel">Description</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="form-group">
+            <!-- <label for="recipient-name" class="col-form-label">Description:</label> -->
+            <textarea readonly type="plain-text" class="form-control" id="recipient-name" rows=5> Description </textarea>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+        <!-- </div> -->
+
+  <script>
+    $('#exampleModal').on('show.bs.modal', function (event) {
+    var button = $(event.relatedTarget) // Button that triggered the modal
+    var recipient = button.data('whatever') // Extract info from data-* attributes
+    // If necessary, you could initiate an AJAX request here (and then do the updating in a callback).
+    // Update the modal's content. We'll use jQuery here, but you could use a data binding library or other methods instead.
+    var modal = $(this)
+    // modal.find('.modal-title').text('New message to ' + recipient)
+    modal.find('.modal-body textarea').val(recipient)
+  })
+  </script>
+        </div>
+  {% endfor %}
+</div>
+</div>
+  <!-- Modal -->
+
+{% endblock %}

@@ -1,0 +1,21 @@
+{% extends 'basetemp.html' %}
+<!-- {% load crispy_forms_tags %} -->
+
+{% block content %}
+
+<div class="container">
+<div class="col-2">
+
+</div>
+<div class="card border-success bg-light mb-4">
+<div class="card-header bg-success text-white">Add commodity to buy</div>
+<div class="card-body p-4">
+<form method = "post" action="">
+{% csrf_token %}
+{{ form|crispy }}
+<input class="btn btn-success" type='submit' value='Save' />
+</form>
+</div>
+</div>
+</div>
+{% endblock %}

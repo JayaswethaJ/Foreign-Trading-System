@@ -1,0 +1,161 @@
+{% extends 'basetemp.html' %}
+
+{% block content %}
+<style>
+  .vision{
+      color: blue;
+      background-color: #F0F8FF;
+  		font-style: italic;
+  }
+</style>
+<center>
+<div class="about" id="aboutUs">
+  <div class="card col-sm-8 border-success m-4 p-2">
+    <div class="card-header bg-success text-white text-center" id="headingOne">
+      <h3>ABOUT US</h3>
+    </div>
+    <div class="card-body">
+      <div class = "vision">
+      To make Foreign Trading possible in a timely, transparent, more<br/>
+accessible, reliable manner and in a comfortable environment through<br/>
+streamlined processes and committed, trained and motivated workforce"
+
+<br>
+<br>
+</div>
+    <div id="collapseOne" class="collapse text-black" aria-labelledby="headingOne" data-parent="#aboutUs">
+
+        The main users of the systems are the traders, who perform individual trades from their
+desks, mostly over the phone. Traders are supported by personal workstations, connected
+to larger corporate servers (or administrators in our parlance). Traders rely on many
+sources of market information, some informal and some formal; the workstation is used to
+convey some of this market information, which is provided by the system of interest in two
+forms: pricing information and market news, from both wire services and financial
+information providers. Pricing information includes current prices of specific
+commodities (e.g. oil) for different time periods. Market news includes press releases,
+demand and supply forecasts, wire stories, etc. The system must collect, filter, and
+disseminate these news to traders.
+A trader executes a trade after completing a negotiation with another trader (called a
+counterparty in commodities parlance). To complete the trade, a formal contract must be
+generated specifying the terms of the deal (e.g. volume, price, quantity, delivery date,
+mode of transportation, or combination thereof). In addition, the trader's position in the
+commodity being traded must be updated appropriately. The position is captured in a
+schedule often known in the industry as a slate, which gives a summary of all agreed to
+receipts and deliveries for a given <commodity, location, month> combination, as defined
+by all contracts pertaining to that combination. Receipts and deliveries of a trade are
+called its legs.
+When a counterparty trader wishes to trade a commodity she contacts a company trader
+and the request to trade the commodity is made. The company trader analyzes the offer to
+trade. For a detailed discussion of this phase see the “analyze potential trade” use case.
+The terms and conditions of the deal are then discussed and negotiated with the
+counterparty trader. This constitutes acceptance of the trade. Upon acceptance, a new trade
+is created
+The details of the trade are registered with the Trade Administrator
+The Trade Administrator makes a permanent, persistent record of the trade details and
+notifies the Position Administrator of the trade.If the trade falls within an existing slate,
+that slate is simply updated with the details of the new trade.
+If no previous trades for the same commodity, movement location and movement period
+have been made, the Position Administrator creates a new slate. In either case a
+permanent, persistent record of the slate state is made.
+The Trade Administrator provides the trade information to the Market Data Service for
+internal news distribution
+The Trade Administrator requests the Contract Administrator to produce a formal printed
+contract
+
+</div>
+<br>
+<h5 class="mb-0">
+  <button class="btn btn-success" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true"
+  aria-controls="collapseOne">More Info
+  </button>
+</h5>
+  </div>
+  </div>
+</div>
+
+
+<div class="card border-success col-sm-8 m-4 p-2">
+  <div class="card-header bg-success text-center" id="headingOne">
+    <h3>OUR TEAM</h3>
+  </div>
+  <div class="card-body">
+  <div class="row">
+
+
+  <div class="col-sm-4" ><br/>
+  </div>
+
+  <div class=" col-sm-4" ><br/>
+  <div class="card-header">
+  <img class="card-img-top rounded-circle pl-4 pr-4" src="https://www.emerce.nl/content/uploads/2018/07/business-3152586_960_720.jpg" height="180" width="180" />
+  </div>
+  <div class="card-body vision">
+    <h2> Rahul Parihar </h2>
+    <h3> Team Leader </h3><br/>
+  </div>
+  </div>
+
+    <div class="col-sm-4" ><br/>
+    </div>
+
+  <div class="col-sm-4 mt-4" ><br/>
+  <div class="card-header">
+  <img class="card-img-top rounded-circle pl-4 pr-4" src="https://www.emerce.nl/content/uploads/2018/07/business-3152586_960_720.jpg" height="180" width="180" />
+  </div>
+  <div class="card-body vision">
+    <h2> Shivani Agrawal </h2>
+  </div>
+  </div>
+
+  <div class="col-sm-4 mt-4" ><br/>
+    <div class="card-header">
+    <img class="card-img-top rounded-circle pl-4 pr-4" src="https://www.emerce.nl/content/uploads/2018/07/business-3152586_960_720.jpg" height="180" width="180" />
+    </div>
+    <div class="card-body vision">
+      <h2> Nabagata Saha </h2>
+    </div>
+    </div>
+
+  <div class="col-sm-4 mt-4" ><br/>
+  <div class="card-header">
+  <img class="card-img-top rounded-circle pl-4 pr-4" src="https://www.emerce.nl/content/uploads/2018/07/business-3152586_960_720.jpg" height="180" width="180" />
+  </div>
+  <div class="card-body vision">
+    <h2> Saleel Mundle </h2>
+  </div>
+  </div>
+
+
+  <div class="col-sm-4 mt-4" ><br/>
+  <div class="card-header">
+  <img class="card-img-top rounded-circle pl-4 pr-4" src="https://www.emerce.nl/content/uploads/2018/07/business-3152586_960_720.jpg" height="180" width="180" />
+  </div>
+  <div class="card-body vision">
+    <h2> Sushil Kumar </h2>
+  </div>
+  </div>
+
+
+  <div class="col-sm-4 mt-4" ><br/>
+  <div class="card-header">
+  <img class="card-img-top rounded-circle pl-4 pr-4" src="https://www.emerce.nl/content/uploads/2018/07/business-3152586_960_720.jpg" height="180" width="180" />
+  </div>
+  <div class="card-body vision">
+    <h2> Satya Teja </h2>
+  </div>
+  </div>
+
+
+  <div class="col-sm-4 mt-4" ><br/>
+  <div class="card-header">
+  <img class="card-img-top rounded-circle pl-4 pr-4" src="https://www.emerce.nl/content/uploads/2018/07/business-3152586_960_720.jpg" height="180" width="180" />
+  </div>
+  <div class="card-body vision">
+    <h2> Mallikarjuna Reddy </h2>
+  </div>
+  </div>
+</div>
+</div>
+
+</center>
+{% endblock %}
